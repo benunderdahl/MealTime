@@ -13,8 +13,20 @@ export default function App() {
     <StatusBar style='light'/>
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Categories" component={CategoryScreen}/>
-        <Stack.Screen name="Meal" component={MealOverviewScreen} />
+        <Stack.Screen name="Categories" component={CategoryScreen} options={{ 
+          title: 'Welcome to the Thunderdome',
+          headerStyle: { backgroundColor: '#eeec79ff'},
+          headerTintColor: "#d66464ff",
+          contentStyle: { backgroundColor: "#fccffcff" }
+           }}/>
+        <Stack.Screen name="Meal" component={MealOverviewScreen} 
+        options={({ route, navigation }) => {
+          const dish = route.params.title
+          return {
+            title: dish,
+          }
+        }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
     </>

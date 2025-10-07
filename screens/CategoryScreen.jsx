@@ -6,7 +6,7 @@ function CategoryScreen({ navigation }) {
   function renderCategoryScreen(itemData) {
     function pressHandler() {
       navigation.navigate("Meal", {
-        categoryId: itemData.item.id, // optional: pass ID to next screen
+        categoryId: itemData.item.id,
       });
     }
 
