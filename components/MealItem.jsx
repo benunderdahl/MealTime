@@ -6,7 +6,8 @@ function MealItem({ id, title, imageUrl, complexity, affordability, duration }) 
     const nav = useNavigation()
     function pressHandler() {
     nav.navigate("details", {
-        id: id
+        id: id,
+        title: title
     })
 }
 

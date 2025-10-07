@@ -28,7 +28,12 @@ export default function App() {
           }
         }}
         />
-        <Stack.Screen name="details" component={DetailScreen} />
+        <Stack.Screen name="details" component={DetailScreen} options={({ route }) => {
+          const meal = route.params.title
+          return {
+            title: meal
+          }
+        }}/>
       </Stack.Navigator>
     </NavigationContainer>
     </>

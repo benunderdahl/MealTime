@@ -9,8 +9,9 @@ function Details({ id }) {
     return <View style={ styles.container }>
         <Image style={ styles.image } source={{ uri: mealDetails.imageUrl }}/>
         <Text style={ styles.title }>{ mealDetails.title }</Text>
-        <View style={ styles.details }>
+        <View style={ styles.detailContainer }>
         <Text style={ styles.subtitle }>Ingredients</Text>
+        <Text style={ styles.details }>{ mealDetails.ingredients }</Text>
         </View>
     </View>
 }
@@ -24,14 +25,16 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 450,
         justifyContent: "center",
-        alignItems: 'center'
+        alignItems: 'center',
     }, 
     title: {
         fontSize: 24,
         fontWeight: 'bold',
+        textAlign: 'center'
     },
     subtitle: {
-        fontSize: 16
+        fontSize: 16,
+        textDecorationLine: 'underline'
     },
     image: {
         flex: 1,
@@ -46,5 +49,12 @@ const styles = StyleSheet.create({
         flex: 1,
         marginTop: 16,
         fontSize: 12
+    },
+    detailContainer: {
+        flex: 1,
+        margin: 15,
+        width: '100%',
+        padding: 15,
+        alignItems: 'center'
     }
 })
