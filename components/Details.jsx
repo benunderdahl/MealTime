@@ -12,6 +12,8 @@ function Details({ id }) {
         <View style={ styles.detailContainer }>
         <Text style={ styles.subtitle }>Ingredients</Text>
         <Text style={ styles.details }>{ mealDetails.ingredients }</Text>
+        <Text style={ styles.subtitle }>Steps</Text>
+        <Text style={ styles.details }>{ mealDetails.steps }</Text>
         </View>
     </View>
 }
@@ -34,10 +36,10 @@ const styles = StyleSheet.create({
     },
     subtitle: {
         fontSize: 16,
-        textDecorationLine: 'underline'
+        textDecorationLine: 'underline',
+        marginTop: 24
     },
     image: {
-        flex: 1,
         width: '100%',
         height: 300,
         borderRadius: 8,
@@ -46,13 +48,13 @@ const styles = StyleSheet.create({
         padding: 8
     },
     details: {
-        flex: 1,
-        marginTop: 16,
-        fontSize: 12
+        marginTop: 8,
+        fontSize: 12,
+        textAlign: 'center'
     },
     detailContainer: {
-        flex: 1,
-        margin: 15,
+        
+        margin: 0,
         width: '100%',
         padding: 15,
         alignItems: 'center'
