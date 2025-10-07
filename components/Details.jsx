@@ -53,7 +53,6 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     detailContainer: {
-        
         margin: 0,
         width: '100%',
         padding: 15,
